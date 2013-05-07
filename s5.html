@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+	<title>Click ME</title>
+    <style>
+      .btns{
+        width:90px;
+        height:40px;
+        background-color: darkorange;
+        color: white;
+        position: absolute;
+        left:45%;
+        top:45%;
+        font-size:18px;
+        text-align: center;
+        line-height:40px;
+        cursor: pointer;
+        -webkit-transition: all 200ms;
+      }
+  </style>
+</head>
+<body>
+  <script>
+    var btns =  document.getElementsByClassName('btns');
+
+var rand = function (max){
+  return Math.round(Math.random()*max);
+};
+
+for(var i=0;i<6;i++){
+  btns.item(i).onmouseover = function(){
+  this.style.left =Math.rand(90) + "%";
+  this.style.top =Math.rand(90)+ "%";
+  };
+}
+  </script>
+	<div class='btns'>Click</div>
+  	<div class='btns'>Click</div>
+	<div class='btns'>Click</div>
+	<div class='btns'>Click</div>
+  	<div class='btns'>Click</div>
+
+</body>
+</html>
